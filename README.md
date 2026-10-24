@@ -23,14 +23,6 @@
 
 Разрешены только адреса `github.com/Smailkiller/…` и `raw.githubusercontent.com/Smailkiller/…` по https.
 
-## Для автора: как выпустить версию
-
-1. Соберите плагин (`build.ps1` в папке плагина) — появится `dist\…-<версия>.zip`.
-2. `powershell -ExecutionPolicy Bypass -File ПЛАГИНЫ\Revit\tools\make_update_manifest.ps1 -IdsNotes notes-ids.md -ZonesNotes notes-zones.md` —
-   формирует `latest.json` и `release-notes\`. Выпуск одного плагина: `-Only Ids` или `-Only Zones` (второй берётся из текущего `latest.json`).
-3. На GitHub создайте релиз с тегом `ids-v<версия>` / `zones-v<версия>`, приложите zip, затем закоммитьте `latest.json` в `main`.
-
-Формат `latest.json`: `{"schema":1,"plugins":{"XmlAgrIds":{"title","version","url","sha256","size","notes","date"},"XmlAgrZones":{…}}}`.
 
 ## Ссылки
 
